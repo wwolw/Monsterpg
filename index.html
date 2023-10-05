@@ -66,6 +66,56 @@ for (var i = 1; i <= 31; i++) {
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Секундомер</title>
+ <script type="text/javascript">
+  var seconds = 0;
+  var interval;
+
+  function toggleTimer() {
+   if (interval) {
+    clearInterval(interval);
+    interval = null;
+   } else {
+    interval = setInterval(function() {
+     seconds++;
+     document.getElementById("timer").innerHTML = seconds;
+    }, 1000);
+   }
+  }
+
+  function resetTimer() {
+   clearInterval(interval);
+   interval = null;
+   seconds = 0;
+   document.getElementById("timer").innerHTML = seconds;
+  }
+ </script>
+</head>
+
+<body>
+
+
+ <h1>Секундомер</h1>
+ <p>Время: <span id="timer">0</span> секунд</p>
+ <button onclick="toggleTimer()">Старт/Стоп</button>
+ <button onclick="resetTimer()">Сброс</button>
+
+
+<div class="box">
+    <!-- изображение-заполнитель -->
+
+    <!-- поле для ввода текста заметки -->
+    <p>Листок бумаги: </p>
+    <textarea></textarea>
+
+
+
+</div>
+</body>
+</html>
 
 
 
