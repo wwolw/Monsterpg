@@ -31,7 +31,7 @@
 
 <img id="random-image">
 <script>
- var images = ["zvermelody.jpg","zmot.JPG","gorila.JPG","zlo.JPG","love.JPG","glukoza.JPG","danc.JPG","noga.JPG","milo.JPG","zmeiava.JPG","pink.JPG","voda.JPG","IMG_7115.JPG","IMG_7118.JPG","IMG_7120.JPG","IMG_7122.JPG","IMG_7123.JPG","IMG_7125.JPG","IMG_7126.JPG","IMG_7128.JPG","IMG_7129.JPG","IMG_7130.JPG","IMG_7131.JPG","IMG_7132.JPG","IMG_7133.JPG","IMG_7134.JPG","IMG_7135.JPG","IMG_7136.JPG","IMG_7137.JPG","IMG_7138.JPG","IMG_7139.JPG","strah.mp4",]; // массив с путями к 10 картинкам
+ var images = ["zvermelody.jpg","zmot.JPG","gorila.JPG","zlo.JPG","love.JPG","glukoza.JPG","danc.JPG","noga.JPG","milo.JPG","zmeiava.JPG","pink.JPG","voda.JPG","IMG_7115.JPG","IMG_7118.JPG","IMG_7120.JPG","IMG_7122.JPG","IMG_7123.JPG","IMG_7125.JPG","IMG_7126.JPG","IMG_7128.JPG","IMG_7129.JPG","IMG_7130.JPG","IMG_7131.JPG","IMG_7132.JPG","IMG_7133.JPG","IMG_7134.JPG","IMG_7135.JPG","IMG_7136.JPG","IMG_7137.JPG","IMG_7138.JPG","IMG_7139.JPG",]; // массив с путями к 10 картинкам
 var usedIndexes = []; // массив, в котором будут храниться уже использованные индексы
 
 function showRandomImage() {
@@ -41,19 +41,19 @@ function showRandomImage() {
 }
 
 function getRandomIndex() {
-  var index = Math.floor(Math.random() * 32); // генерируем случайный индекс от 0 до 11
-  if (usedIndexes.length === 32) { // если использовали все индексы, начинаем заново
+  var index = Math.floor(Math.random() * 31); // генерируем случайный индекс от 0 до 11
+  if (usedIndexes.length === 31) { // если использовали все индексы, начинаем заново
     alert ("Вау! Вы победили всех монстров! ️Но повезло не всем, игрок ☠️ у которого меньше всего жизней всё же не дошел до конца ⚰️");usedIndexes = [];
   }
   while (usedIndexes.includes(index)) { // проверяем, использовали ли мы уже этот индекс
-    index = Math.floor(Math.random() * 32);
+    index = Math.floor(Math.random() * 31);
   }
   usedIndexes.push(index); // добавляем использованный индекс в массив
   return index;
 }
 
 // заполним массив с путями к картинкам
-for (var i = 1; i <= 32; i++) {
+for (var i = 1; i <= 31; i++) {
   images.push("path/to/image" + i + ".jpg");
 }
 </script>
