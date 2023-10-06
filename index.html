@@ -15,13 +15,14 @@
   <form method="dialog">
     <!-- если у тега button не указан type, то по-умолчанию он будет type="submit" ! -->
     <button>НАЧАТЬ ИГРАТЬ</button>
+
   </form>
 </dialog>
-	
 
-	
+
+
  <meta charset="UTF-8">
-<title>Пати с монстрами v.03</title>
+<title>Пати с монстрами v.04</title>
 
 
  <meta name="description" content=" игра для компании">
@@ -45,12 +46,12 @@
 </style>
 
 <h1> Monster Party Game </h1>
-	
 
- 
+
+
 <button
-        style="font-size: 20px; color: red; background-color: #7dc4fa; border: none; padding: 10px; border-radius: 40px; cursor: pointer;"
-        onclick="showRandomImage()">   П👹ВСТРЕЧАТЬ М👹НСТРА   
+        style="font-size: 30px; color: #000000; background-color: #7dc4fa; border: none; padding: 10px; border-radius: 20px; cursor: pointer; margin: 20px 10px;"
+        onclick="showRandomImage()">   П👹ВСТРЕЧАТЬ М👹НСТРА
  </button>
 <style>
   button:active {
@@ -98,7 +99,7 @@ for (var i = 1; i <= 41; i++) {
 <!DOCTYPE html>
 <html>
 <head>
- 
+
  <script type="text/javascript">
   var seconds = 0;
   var interval;
@@ -127,23 +128,28 @@ for (var i = 1; i <= 41; i++) {
 <body>
 
 
- 
- <p>Секундомер: <span id="timer">0</span> секунд</p>
- <button onclick="toggleTimer()">Старт/Стоп</button>
- <button onclick="resetTimer()">Сброс</button>
+
+ <p><strong style="font-size: 20px;">Секундомер:</strong>
+  ⏳ <span id="timer">0</span> секунд</p>
+ <button
+          style="font-size: 15px; color: #000000; background-color: #90ee90; border: none; padding: 10px; border-radius:50px; cursor: pointer; margin:5px 5px;"
+         onclick="toggleTimer()">Старт/Стоп</button>
+
+
+ <button style="font-size: 15px; color: #000000; background-color: #f6768e; border: none; padding: 10px; border-radius:50px; cursor: pointer; "
+         onclick="resetTimer()">Сброс</button>
+
+
 
 
 <div class="box">
- 
+
 
 
 
 
 </body>
 </html>
-
-
-
 
 
 	
