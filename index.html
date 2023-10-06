@@ -65,19 +65,19 @@ function showRandomImage() {
 }
 
 function getRandomIndex() {
-  var index = Math.floor(Math.random() * 31); // генерируем случайный индекс от 0 до 11
-  if (usedIndexes.length === 31) { // если использовали все индексы, начинаем заново
+  var index = Math.floor(Math.random() * 41); // генерируем случайный индекс от 0 до 100
+  if (usedIndexes.length === 41) { // если использовали все индексы, начинаем заново
     alert ("Вау! Вы победили всех монстров! ️Но повезло не всем, игрок ☠️ у которого меньше всего жизней всё же не дошел до конца ⚰️");usedIndexes = [];
   }
   while (usedIndexes.includes(index)) { // проверяем, использовали ли мы уже этот индекс
-    index = Math.floor(Math.random() * 31);
+    index = Math.floor(Math.random() * 41);
   }
   usedIndexes.push(index); // добавляем использованный индекс в массив
   return index;
 }
 
 // заполним массив с путями к картинкам
-for (var i = 1; i <= 31; i++) {
+for (var i = 1; i <= 41; i++) {
   images.push("path/to/image" + i + ".jpg");
 }
 </script>
